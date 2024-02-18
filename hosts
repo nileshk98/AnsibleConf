@@ -1,0 +1,5 @@
+[slave1]
+3.111.126.67 ansible_ssh_private_key_file=DemoKP.pem ansible_ssh_user=ubuntu
+
+[slave2]
+13.201.141.73 ansible_ssh_private_key_file=DemoKP.pem ansible_ssh_user=ubuntu
