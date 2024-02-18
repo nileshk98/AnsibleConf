@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install Apache on the first instance
+      apt:
+        name: apache2
+        state: present
+      when: ansible_hostname == "slave1"
+
+    - name: Install Nginx on the second instance
+      apt:
+        name: nginx
+        state: present
+      when: ansible_hostname == "slave2"
+...
+
